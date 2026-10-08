@@ -1,735 +1,589 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Professional business websites starting at ₹999.">
-<title>Websites for Your Business | ₹999</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
+    <meta
+        name="description"
+        content="Webs by DETWAL creates modern, responsive business websites starting at ₹999."
+    >
 
-html{scroll-behavior:smooth}
+    <title>Webs by DETWAL — Websites Starting at ₹999</title>
 
-body{
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  color:#111;
-  background:#fff;
-  overflow-x:hidden;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-/* HERO */
-
-.hero{
-  text-align:center;
-  padding:55px 20px 20px;
-}
-
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  border:1px solid #e7e7e7;
-  border-radius:999px;
-  padding:9px 14px;
-  font-size:12px;
-  font-weight:700;
-  animation:drop .7s ease;
-}
-
-.badge i{
-  width:7px;
-  height:7px;
-  background:#111;
-  border-radius:50%;
-  animation:blink 1.5s infinite;
-}
-
-.hero h1{
-  font-size:clamp(42px,9vw,76px);
-  line-height:.93;
-  letter-spacing:-.065em;
-  margin:25px auto 18px;
-  max-width:850px;
-  animation:up .8s .1s both;
-}
-
-.hero h1 span{
-  display:inline-block;
-  animation:float 3s ease-in-out infinite;
-}
-
-.hero p{
-  font-size:16px;
-  line-height:1.65;
-  color:#707070;
-  max-width:540px;
-  margin:auto;
-  animation:up .8s .2s both;
-}
-
-.price{
-  display:inline-flex;
-  align-items:baseline;
-  gap:6px;
-  margin-top:20px;
-  font-weight:800;
-  animation:up .8s .3s both;
-}
-
-.price strong{
-  font-size:31px;
-  letter-spacing:-.04em;
-}
-
-.price small{
-  font-size:12px;
-  color:#777;
-}
-
-.btn{
-  display:inline-flex;
-  margin:20px 0 8px;
-  background:#111;
-  color:#fff;
-  border-radius:13px;
-  padding:15px 23px;
-  font-size:13px;
-  font-weight:800;
-  transition:.3s;
-  animation:up .8s .4s both;
-}
-
-.btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 15px 30px #0002;
-}
-
-/* WEBSITE SHOWCASE */
-
-.stage{
-  max-width:950px;
-  margin:30px auto 0;
-  position:relative;
-  height:430px;
-}
-
-.device{
-  position:absolute;
-  width:76%;
-  left:12%;
-  top:20px;
-  border:1px solid #dedede;
-  border-radius:20px;
-  background:#fff;
-  box-shadow:0 25px 65px #00000013;
-  overflow:hidden;
-  transition:.7s ease;
-  z-index:3;
-}
-
-.device.back-left{
-  width:53%;
-  left:0;
-  top:105px;
-  transform:rotate(-7deg) scale(.84);
-  z-index:1;
-}
-
-.device.back-right{
-  width:53%;
-  right:0;
-  left:auto;
-  top:115px;
-  transform:rotate(7deg) scale(.82);
-  z-index:1;
-}
-
-.top{
-  height:34px;
-  background:#fafafa;
-  border-bottom:1px solid #eee;
-  display:flex;
-  align-items:center;
-  padding-left:11px;
-  gap:5px;
-}
-
-.c{
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:#ccc;
-}
-
-.screen{
-  height:280px;
-  padding:28px;
-  background:linear-gradient(135deg,#f7f7f5,#fff);
-  text-align:left;
-}
-
-.screen.dark{
-  background:#121212;
-  color:#fff;
-}
-
-.tiny{
-  font-size:9px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:#888;
-  font-weight:800;
-}
-
-.screen.dark .tiny{
-  color:#aaa;
-}
-
-.screen h2{
-  font-size:clamp(28px,5vw,45px);
-  line-height:1;
-  letter-spacing:-.05em;
-  margin:10px 0;
-  max-width:520px;
-}
-
-.screen p{
-  font-size:11px;
-  color:#777;
-  max-width:320px;
-  line-height:1.5;
-}
-
-.screen.dark p{
-  color:#aaa;
-}
-
-.line{
-  width:75px;
-  height:5px;
-  border-radius:4px;
-  background:#111;
-  margin-top:15px;
-}
-
-.screen.dark .line{
-  background:#fff;
-}
-
-.blocks{
-  display:flex;
-  gap:8px;
-  margin-top:25px;
-}
-
-.block{
-  height:58px;
-  flex:1;
-  border:1px solid #e5e5e5;
-  border-radius:9px;
-  background:#fff;
-}
-
-.screen.dark .block{
-  background:#222;
-  border-color:#333;
-}
-
-/* FLOATING CARDS */
-
-.floatcard{
-  position:absolute;
-  background:#fff;
-  border:1px solid #e5e5e5;
-  border-radius:12px;
-  padding:11px 14px;
-  font-size:10px;
-  font-weight:800;
-  box-shadow:0 12px 30px #0000000c;
-  z-index:5;
-}
-
-.fc1{
-  left:7%;
-  top:25px;
-  animation:orb 3.2s ease-in-out infinite;
-}
-
-.fc2{
-  right:6%;
-  bottom:70px;
-  animation:orb 3.8s .8s ease-in-out infinite;
-}
-
-.fc3{
-  left:18%;
-  bottom:25px;
-  animation:orb 3.5s 1.3s ease-in-out infinite;
-}
-
-/* SLIDER INDICATORS */
-
-.strip{
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  margin-top:4px;
-}
-
-.bar{
-  height:4px;
-  width:22px;
-  border-radius:5px;
-  background:#ddd;
-  transition:.4s;
-}
-
-.bar.on{
-  width:42px;
-  background:#111;
-}
-
-/* BENEFITS */
-
-.benefits{
-  max-width:950px;
-  margin:35px auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  padding:0 15px;
-}
-
-.benefit{
-  padding:20px 14px;
-  border-top:1px solid #ddd;
-  text-align:center;
-  animation:up .7s both;
-}
-
-.benefit:nth-child(2){
-  animation-delay:.1s;
-}
-
-.benefit:nth-child(3){
-  animation-delay:.2s;
-}
-
-.benefit b{
-  font-size:13px;
-}
-
-.benefit p{
-  font-size:11px;
-  color:#777;
-  margin-top:6px;
-  line-height:1.5;
-}
-
-/* MOVING TEXT */
-
-.marquee{
-  margin:30px 0 0;
-  border-top:1px solid #eee;
-  border-bottom:1px solid #eee;
-  overflow:hidden;
-  white-space:nowrap;
-  padding:15px 0;
-}
-
-.track{
-  display:inline-flex;
-  gap:28px;
-  animation:scroll 15s linear infinite;
-}
-
-.track span{
-  font-size:11px;
-  font-weight:800;
-  color:#777;
-}
-
-.bottom{
-  text-align:center;
-  padding:30px 10px;
-  color:#999;
-  font-size:11px;
-}
-
-/* ANIMATIONS */
-
-@keyframes up{
-  from{
-    opacity:0;
-    transform:translateY(22px);
-  }
-  to{
-    opacity:1;
-    transform:none;
-  }
-}
-
-@keyframes drop{
-  from{
-    opacity:0;
-    transform:translateY(-12px);
-  }
-  to{
-    opacity:1;
-    transform:none;
-  }
-}
-
-@keyframes blink{
-  50%{
-    opacity:.25;
-  }
-}
-
-@keyframes orb{
-  0%,100%{
-    transform:translateY(0);
-  }
-  50%{
-    transform:translateY(-10px);
-  }
-}
-
-@keyframes float{
-  0%,100%{
-    transform:translateY(0);
-  }
-  50%{
-    transform:translateY(-5px);
-  }
-}
-
-@keyframes scroll{
-  to{
-    transform:translateX(-50%);
-  }
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-  .hero{
-    padding-top:35px;
-  }
-
-  .stage{
-    height:330px;
-  }
-
-  .device{
-    width:88%;
-    left:6%;
-  }
-
-  .device.back-left,
-  .device.back-right{
-    width:55%;
-    opacity:.55;
-  }
-
-  .screen{
-    height:220px;
-    padding:22px;
-  }
-
-  .screen h2{
-    font-size:27px;
-  }
-
-  .benefits{
-    grid-template-columns:1fr;
-  }
-
-  .benefit{
-    text-align:left;
-  }
-
-  .floatcard{
-    font-size:9px;
-  }
-}
-
-/* ACCESSIBILITY */
-
-@media(prefers-reduced-motion:reduce){
-
-  *{
-    animation:none!important;
-    transition:none!important;
-  }
-}
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- ================= NAVBAR ================= -->
 
-<header class="hero">
+<header class="navbar">
 
-  <div class="badge">
-    <i></i>
-    Professional websites for businesses
-  </div>
+    <a href="index.html" class="logo">
+        Webs by <span>DETWAL</span>
+    </a>
 
-  <h1>
-    Get your business website for <span>₹999.</span>
-  </h1>
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#process">How It Works</a>
+        <a href="#pricing">Pricing</a>
+    </nav>
 
-  <p>
-    We create clean, modern and mobile-friendly websites
-    that help your business look professional online.
-  </p>
-
-  <div class="price">
-    <strong>₹999</strong>
-    <small>starting price</small>
-  </div>
-
-  <a class="btn" href="#work">
-    Get Your Website&nbsp; →
-  </a>
+    <a href="#start" class="nav-button">
+        Get Started
+    </a>
 
 </header>
 
 
-<!-- WEBSITE SHOWCASE -->
+<!-- ================= HERO ================= -->
 
-<section id="work" class="stage" aria-label="Website design showcase">
+<main>
 
-  <div class="floatcard fc1">
-    ✦ Modern design
-  </div>
+<section id="home" class="hero">
 
-  <div class="floatcard fc2">
-    ✓ Mobile ready
-  </div>
-
-  <div class="floatcard fc3">
-    ⚡ Fast delivery
-  </div>
-
-
-  <!-- MAIN WEBSITE -->
-
-  <div class="device main-device">
-
-    <div class="top">
-      <span class="c"></span>
-      <span class="c"></span>
-      <span class="c"></span>
+    <div class="hero-badge">
+        <span class="status-dot"></span>
+        Professional websites for businesses
     </div>
 
-    <div class="screen">
+    <h1>
+        Your business deserves
+        <span>a better website.</span>
+    </h1>
 
-      <div class="tiny">
-        Your business
-      </div>
+    <p class="hero-text">
+        Modern, responsive and professional websites
+        built for businesses that want to grow online.
+    </p>
 
-      <h2>
-        Look professional.<br>
-        Get noticed.
-      </h2>
+    <div class="hero-price">
 
-      <p>
-        A beautiful website made around your business
-        and your customers.
-      </p>
+        <span class="price-label">
+            Websites starting at
+        </span>
 
-      <div class="line"></div>
-
-      <div class="blocks">
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-      </div>
+        <strong>₹999</strong>
 
     </div>
 
-  </div>
+    <div class="hero-buttons">
 
+        <a href="#pricing" class="primary-button">
+            View Packages
+            <span>→</span>
+        </a>
 
-  <!-- SECOND WEBSITE -->
-
-  <div class="device back-left">
-
-    <div class="top">
-      <span class="c"></span>
-      <span class="c"></span>
-      <span class="c"></span>
-    </div>
-
-    <div class="screen dark">
-
-      <div class="tiny">
-        Creative studio
-      </div>
-
-      <h2>
-        Built to stand out.
-      </h2>
-
-      <p>
-        Bold, responsive and designed for modern brands.
-      </p>
+        <a href="#showcase" class="secondary-button">
+            See Our Work
+        </a>
 
     </div>
 
-  </div>
+
+    <!-- WEBSITE SHOWCASE -->
+
+    <div id="showcase" class="website-showcase">
+
+        <div class="floating-card floating-one">
+            ✦ Modern Design
+        </div>
+
+        <div class="floating-card floating-two">
+            ✓ Mobile Friendly
+        </div>
+
+        <div class="floating-card floating-three">
+            ⚡ Fast Delivery
+        </div>
 
 
-  <!-- THIRD WEBSITE -->
+        <!-- MAIN WEBSITE -->
 
-  <div class="device back-right">
+        <div class="website-preview preview-main">
 
-    <div class="top">
-      <span class="c"></span>
-      <span class="c"></span>
-      <span class="c"></span>
+            <div class="browser-bar">
+
+                <div class="browser-dots">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+
+                <div class="browser-address">
+                    yourbusiness.com
+                </div>
+
+            </div>
+
+
+            <div class="preview-content">
+
+                <span class="preview-label">
+                    YOUR BUSINESS
+                </span>
+
+                <h2>
+                    Make a strong
+                    first impression.
+                </h2>
+
+                <p>
+                    A clean digital presence designed
+                    around your business and customers.
+                </p>
+
+                <div class="preview-button">
+                    Explore →
+                </div>
+
+                <div class="preview-cards">
+
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LEFT WEBSITE -->
+
+        <div class="website-preview preview-left">
+
+            <div class="browser-bar">
+
+                <div class="browser-dots">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+
+            </div>
+
+            <div class="preview-dark">
+
+                <span>
+                    CREATIVE STUDIO
+                </span>
+
+                <h2>
+                    Built to stand out.
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT WEBSITE -->
+
+        <div class="website-preview preview-right">
+
+            <div class="browser-bar">
+
+                <div class="browser-dots">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+
+            </div>
+
+            <div class="preview-light">
+
+                <span>
+                    LOCAL BUSINESS
+                </span>
+
+                <h2>
+                    Simple.
+                    Professional.
+                </h2>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="screen">
 
-      <div class="tiny">
-        Local business
-      </div>
+    <!-- SLIDER INDICATOR -->
 
-      <h2>
-        Simple. Clean.<br>
-        Effective.
-      </h2>
+    <div class="slider-indicator">
 
-      <p>
-        Turn visitors into customers with a strong
-        online presence.
-      </p>
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
 
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- SLIDER INDICATORS -->
+<!-- ================= TRUST STRIP ================= -->
 
-<div class="strip">
-  <span class="bar on"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
-</div>
+<section class="trust-strip">
 
+    <div>
+        <strong>₹999</strong>
+        <span>Starting Price</span>
+    </div>
 
-<!-- BENEFITS -->
+    <div>
+        <strong>100%</strong>
+        <span>Responsive</span>
+    </div>
 
-<section class="benefits">
+    <div>
+        <strong>Modern</strong>
+        <span>Design</span>
+    </div>
 
-  <div class="benefit">
-    <b>Premium look</b>
-    <p>
-      Clean design that feels professional.
-    </p>
-  </div>
-
-  <div class="benefit">
-    <b>Mobile friendly</b>
-    <p>
-      Works beautifully on phones.
-    </p>
-  </div>
-
-  <div class="benefit">
-    <b>₹999 starting</b>
-    <p>
-      No complicated pricing.
-    </p>
-  </div>
+    <div>
+        <strong>Fast</strong>
+        <span>Delivery</span>
+    </div>
 
 </section>
 
 
-<!-- MOVING TEXT -->
+<!-- ================= WHY US ================= -->
 
-<div class="marquee">
+<section id="why-us" class="section">
 
-  <div class="track">
+    <div class="section-heading">
 
-    <span>WEBSITES</span>
-    <span>•</span>
+        <span>WHY WE BUILD</span>
 
-    <span>DESIGN</span>
-    <span>•</span>
+        <h2>
+            Your website should
+            work for your business.
+        </h2>
 
-    <span>BUSINESS</span>
-    <span>•</span>
+        <p>
+            We focus on clean design, simple experiences
+            and websites that make your business look
+            professional online.
+        </p>
 
-    <span>MODERN</span>
-    <span>•</span>
-
-    <span>WEBSITES</span>
-    <span>•</span>
-
-    <span>DESIGN</span>
-    <span>•</span>
-
-    <span>BUSINESS</span>
-    <span>•</span>
-
-    <span>MODERN</span>
-    <span>•</span>
-
-  </div>
-
-</div>
+    </div>
 
 
-<div class="bottom">
-  Your online presence starts here.
-</div>
+    <div class="feature-grid">
+
+        <article class="feature-card">
+
+            <div class="feature-number">
+                01
+            </div>
+
+            <h3>
+                Premium Design
+            </h3>
+
+            <p>
+                Clean layouts and modern visuals
+                without unnecessary clutter.
+            </p>
+
+        </article>
 
 
-<script>
+        <article class="feature-card">
 
-const devices = document.querySelectorAll(".device");
-const bars = document.querySelectorAll(".bar");
+            <div class="feature-number">
+                02
+            </div>
 
-let current = 0;
+            <h3>
+                Mobile First
+            </h3>
 
-setInterval(() => {
+            <p>
+                Your website looks great on phones,
+                tablets and computers.
+            </p>
 
-  current = (current + 1) % 3;
+        </article>
 
-  devices.forEach((device,index) => {
 
-    device.style.zIndex =
-      index === current ? "4" : "1";
+        <article class="feature-card">
 
-  });
+            <div class="feature-number">
+                03
+            </div>
 
-  bars.forEach((bar,index) => {
+            <h3>
+                Affordable
+            </h3>
 
-    bar.classList.toggle(
-      "on",
-      index === current
-    );
+            <p>
+                Professional websites without
+                an unnecessarily expensive price tag.
+            </p>
 
-  });
+        </article>
 
-},3000);
 
-</script>
+        <article class="feature-card">
+
+            <div class="feature-number">
+                04
+            </div>
+
+            <h3>
+                Built For You
+            </h3>
+
+            <p>
+                Your website is designed around
+                your business and its goals.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section id="process" class="section process-section">
+
+    <div class="section-heading">
+
+        <span>HOW IT WORKS</span>
+
+        <h2>
+            From idea to website.
+        </h2>
+
+        <p>
+            Getting your business online doesn't
+            have to be complicated.
+        </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+        <article class="process-card">
+
+            <div class="process-number">
+                01
+            </div>
+
+            <h3>
+                Tell us what you need
+            </h3>
+
+            <p>
+                Share your business details,
+                ideas and requirements.
+            </p>
+
+        </article>
+
+
+        <article class="process-card">
+
+            <div class="process-number">
+                02
+            </div>
+
+            <h3>
+                We build your website
+            </h3>
+
+            <p>
+                Our team turns your idea into
+                a modern website.
+            </p>
+
+        </article>
+
+
+        <article class="process-card">
+
+            <div class="process-number">
+                03
+            </div>
+
+            <h3>
+                Go live
+            </h3>
+
+            <p>
+                Your website is ready for
+                customers to discover.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRICING ================= -->
+
+<section id="pricing" class="pricing-section">
+
+    <div class="section-heading">
+
+        <span>PRICING</span>
+
+        <h2>
+            Start with just ₹999.
+        </h2>
+
+        <p>
+            Choose the package that fits
+            your business.
+        </p>
+
+    </div>
+
+
+    <div class="pricing-preview">
+
+        <article class="price-card">
+
+            <span>
+                STARTER
+            </span>
+
+            <h3>
+                ₹999
+            </h3>
+
+            <p>
+                A simple professional
+                business website.
+            </p>
+
+            <a href="services.html">
+                View Package →
+            </a>
+
+        </article>
+
+
+        <article class="price-card featured">
+
+            <div class="popular">
+                MOST POPULAR
+            </div>
+
+            <span>
+                PROFESSIONAL
+            </span>
+
+            <h3>
+                ₹2,549
+            </h3>
+
+            <p>
+                A stronger online presence
+                for growing businesses.
+            </p>
+
+            <a href="services.html">
+                View Package →
+            </a>
+
+        </article>
+
+
+        <article class="price-card">
+
+            <span>
+                ADVANCED
+            </span>
+
+            <h3>
+                ₹5,999
+            </h3>
+
+            <p>
+                A premium custom website
+                with advanced features.
+            </p>
+
+            <a href="services.html">
+                View Package →
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section id="start" class="final-cta">
+
+    <span>
+        READY WHEN YOU ARE
+    </span>
+
+    <h2>
+        Let's build something
+        your customers remember.
+    </h2>
+
+    <p>
+        Get your professional website
+        starting at ₹999.
+    </p>
+
+    <a href="support.html" class="primary-button">
+        Start Your Website →
+    </a>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        Webs by DETWAL
+    </div>
+
+    <p>
+        Modern websites for modern businesses.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="services.html">Services</a>
+        <a href="support.html">Support</a>
+
+    </div>
+
+    <small>
+        © 2026 Webs by DETWAL. All rights reserved.
+    </small>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
