@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Affordable professional website packages starting at ₹999.">
+<title>Services | Website Development</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#fff;
+  color:#111;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* NAVBAR */
+
+nav{
+  width:100%;
+  padding:22px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+  z-index:20;
+  animation:fadeDown .7s ease;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:-.05em;
+}
+
+.nav-link{
+  font-size:13px;
+  font-weight:700;
+  color:#666;
+  transition:.25s;
+}
+
+.nav-link:hover{
+  color:#111;
+}
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:70px 20px 45px;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 13px;
+  border:1px solid #e8e8e8;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:800;
+  animation:fadeUp .7s ease;
+}
+
+.badge span{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#111;
+  animation:pulse 1.5s infinite;
+}
+
+.hero h1{
+  font-size:clamp(45px,9vw,76px);
+  line-height:.94;
+  letter-spacing:-.065em;
+  max-width:800px;
+  margin:24px auto 18px;
+  animation:fadeUp .8s .1s both;
+}
+
+.hero h1 span{
+  display:inline-block;
+  animation:float 3s ease-in-out infinite;
+}
+
+.hero p{
+  max-width:540px;
+  margin:auto;
+  color:#707070;
+  font-size:15px;
+  line-height:1.7;
+  animation:fadeUp .8s .2s both;
+}
+
+/* PRICING */
+
+.pricing{
+  max-width:1100px;
+  margin:20px auto 70px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  position:relative;
+  border:1px solid #e6e6e6;
+  border-radius:22px;
+  padding:30px;
+  background:#fff;
+  transition:.4s ease;
+  animation:fadeUp .8s both;
+}
+
+.card:nth-child(1){
+  animation-delay:.15s;
+}
+
+.card:nth-child(2){
+  animation-delay:.25s;
+}
+
+.card:nth-child(3){
+  animation-delay:.35s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 55px rgba(0,0,0,.09);
+}
+
+.card.popular{
+  border:1.5px solid #111;
+  transform:translateY(-8px);
+}
+
+.card.popular:hover{
+  transform:translateY(-16px);
+}
+
+.popular-badge{
+  position:absolute;
+  top:-12px;
+  left:25px;
+  background:#111;
+  color:#fff;
+  padding:6px 11px;
+  border-radius:999px;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.05em;
+}
+
+.card-number{
+  font-size:11px;
+  color:#999;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.card h2{
+  font-size:25px;
+  letter-spacing:-.045em;
+  margin-top:12px;
+}
+
+.card-description{
+  color:#777;
+  font-size:12px;
+  line-height:1.6;
+  margin-top:9px;
+  min-height:58px;
+}
+
+.price{
+  margin:25px 0;
+  display:flex;
+  align-items:baseline;
+  gap:5px;
+}
+
+.price strong{
+  font-size:39px;
+  letter-spacing:-.06em;
+}
+
+.price small{
+  color:#888;
+  font-size:11px;
+}
+
+.card-button{
+  display:block;
+  width:100%;
+  text-align:center;
+  background:#111;
+  color:#fff;
+  padding:13px;
+  border-radius:11px;
+  font-size:12px;
+  font-weight:800;
+  transition:.3s;
+}
+
+.card-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px #0002;
+}
+
+.features{
+  margin-top:25px;
+  padding-top:22px;
+  border-top:1px solid #eee;
+}
+
+.features-title{
+  font-size:10px;
+  color:#999;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  margin-bottom:13px;
+}
+
+.features li{
+  list-style:none;
+  display:flex;
+  gap:8px;
+  font-size:12px;
+  color:#555;
+  margin:11px 0;
+}
+
+.features li::before{
+  content:"✓";
+  color:#111;
+  font-weight:900;
+}
+
+/* MOVING STRIP */
+
+.marquee{
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  overflow:hidden;
+  white-space:nowrap;
+  padding:16px 0;
+}
+
+.track{
+  display:inline-flex;
+  align-items:center;
+  gap:28px;
+  animation:scroll 14s linear infinite;
+}
+
+.track span{
+  font-size:11px;
+  font-weight:900;
+  color:#888;
+}
+
+/* BOTTOM CTA */
+
+.cta{
+  text-align:center;
+  padding:80px 20px 90px;
+}
+
+.cta h2{
+  font-size:clamp(35px,7vw,58px);
+  letter-spacing:-.06em;
+  line-height:1;
+  max-width:650px;
+  margin:auto;
+  animation:fadeUp .8s ease;
+}
+
+.cta p{
+  color:#777;
+  font-size:14px;
+  margin:17px auto 23px;
+}
+
+.cta-button{
+  display:inline-flex;
+  background:#111;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:800;
+  transition:.3s;
+}
+
+.cta-button:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 30px #0002;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  border-top:1px solid #eee;
+  color:#999;
+  font-size:10px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+@keyframes fadeDown{
+  from{
+    opacity:0;
+    transform:translateY(-15px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+@keyframes pulse{
+  50%{
+    opacity:.3;
+    transform:scale(.7);
+  }
+}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-5px);
+  }
+}
+
+@keyframes scroll{
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .pricing{
+    grid-template-columns:1fr;
+    max-width:500px;
+  }
+
+  .card.popular{
+    transform:none;
+  }
+
+  .card.popular:hover{
+    transform:translateY(-10px);
+  }
+
+  .hero{
+    padding-top:45px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  *{
+    animation:none!important;
+    transition:none!important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+  <div class="logo">
+    YOURBRAND
+  </div>
+
+  <a class="nav-link" href="index.html">
+    Home →
+  </a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="badge">
+    <span></span>
+    Simple pricing. Professional websites.
+  </div>
+
+  <h1>
+    Choose the website<br>
+    <span>you need.</span>
+  </h1>
+
+  <p>
+    From simple business websites to advanced custom experiences,
+    choose a package that fits your business and budget.
+  </p>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section class="pricing">
+
+
+  <!-- ₹999 -->
+
+  <article class="card">
+
+    <div class="card-number">
+      01 / Starter
+    </div>
+
+    <h2>
+      Starter Web
+    </h2>
+
+    <p class="card-description">
+      A clean and professional website for small businesses,
+      shops and individuals.
+    </p>
+
+    <div class="price">
+      <strong>₹999</strong>
+      <small>starting</small>
+    </div>
+
+    <a href="support.html" class="card-button">
+      Get Started →
+    </a>
+
+    <div class="features">
+
+      <div class="features-title">
+        Includes
+      </div>
+
+      <ul>
+        <li>Modern responsive design</li>
+        <li>Mobile friendly</li>
+        <li>Up to 4 pages</li>
+        <li>Basic animations</li>
+        <li>Business information</li>
+      </ul>
+
+    </div>
+
+  </article>
+
+
+  <!-- ₹2549 -->
+
+  <article class="card popular">
+
+    <div class="popular-badge">
+      MOST POPULAR
+    </div>
+
+    <div class="card-number">
+      02 / Professional
+    </div>
+
+    <h2>
+      Professional Web
+    </h2>
+
+    <p class="card-description">
+      A more complete website for businesses that want
+      a stronger online presence.
+    </p>
+
+    <div class="price">
+      <strong>₹2,549</strong>
+      <small>starting</small>
+    </div>
+
+    <a href="support.html" class="card-button">
+      Get Started →
+    </a>
+
+    <div class="features">
+
+      <div class="features-title">
+        Includes
+      </div>
+
+      <ul>
+        <li>Everything in Starter</li>
+        <li>More pages & sections</li>
+        <li>Advanced animations</li>
+        <li>Custom design sections</li>
+        <li>Better business presentation</li>
+      </ul>
+
+    </div>
+
+  </article>
+
+
+  <!-- ₹5999 -->
+
+  <article class="card">
+
+    <div class="card-number">
+      03 / Advanced
+    </div>
+
+    <h2>
+      Advanced Web
+    </h2>
+
+    <p class="card-description">
+      A premium custom website for businesses that
+      need a more powerful online experience.
+    </p>
+
+    <div class="price">
+      <strong>₹5,999</strong>
+      <small>starting</small>
+    </div>
+
+    <a href="support.html" class="card-button">
+      Get Started →
+    </a>
+
+    <div class="features">
+
+      <div class="features-title">
+        Includes
+      </div>
+
+      <ul>
+        <li>Everything in Professional</li>
+        <li>Premium custom design</li>
+        <li>Advanced interactions</li>
+        <li>Custom sections</li>
+        <li>Advanced functionality</li>
+      </ul>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+<!-- MOVING TEXT -->
+
+<div class="marquee">
+
+  <div class="track">
+
+    <span>STARTER ₹999</span>
+    <span>•</span>
+
+    <span>PROFESSIONAL ₹2,549</span>
+    <span>•</span>
+
+    <span>ADVANCED ₹5,999</span>
+    <span>•</span>
+
+    <span>STARTER ₹999</span>
+    <span>•</span>
+
+    <span>PROFESSIONAL ₹2,549</span>
+    <span>•</span>
+
+    <span>ADVANCED ₹5,999</span>
+    <span>•</span>
+
+  </div>
+
+</div>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <h2>
+    Ready to put your business online?
+  </h2>
+
+  <p>
+    Tell us what you need. We'll help you choose the right package.
+  </p>
+
+  <a href="support.html" class="cta-button">
+    Start Your Website →
+  </a>
+
+</section>
+
+
+<footer>
+  © 2026 YourBrand. All rights reserved.
+</footer>
+
+
+</body>
+</html>
