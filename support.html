@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact us for professional websites starting at ₹999.">
+<title>Support | YourBrand</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#fff;
+  color:#111;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* NAVIGATION */
+
+nav{
+  padding:22px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  animation:fadeDown .7s ease;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:-.05em;
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+}
+
+.nav-links a{
+  font-size:12px;
+  font-weight:700;
+  color:#777;
+  transition:.25s;
+}
+
+.nav-links a:hover{
+  color:#111;
+}
+
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:65px 20px 45px;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 13px;
+  border:1px solid #e7e7e7;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:800;
+  animation:fadeUp .7s ease;
+}
+
+.badge span{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#111;
+  animation:pulse 1.5s infinite;
+}
+
+.hero h1{
+  font-size:clamp(45px,9vw,75px);
+  line-height:.94;
+  letter-spacing:-.065em;
+  max-width:750px;
+  margin:25px auto 18px;
+  animation:fadeUp .8s .1s both;
+}
+
+.hero h1 span{
+  display:inline-block;
+  animation:float 3s ease-in-out infinite;
+}
+
+.hero p{
+  max-width:520px;
+  margin:auto;
+  color:#707070;
+  font-size:15px;
+  line-height:1.7;
+  animation:fadeUp .8s .2s both;
+}
+
+
+/* SUPPORT GRID */
+
+.support{
+  max-width:1000px;
+  margin:20px auto 80px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+
+/* CONTACT CARD */
+
+.contact-card{
+  border:1px solid #e6e6e6;
+  border-radius:22px;
+  padding:30px;
+  animation:fadeUp .8s .25s both;
+  transition:.35s;
+}
+
+.contact-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 20px 50px rgba(0,0,0,.07);
+}
+
+.contact-card h2{
+  font-size:25px;
+  letter-spacing:-.04em;
+}
+
+.contact-card>p{
+  color:#777;
+  font-size:12px;
+  line-height:1.6;
+  margin:9px 0 25px;
+}
+
+
+/* CONTACT OPTIONS */
+
+.option{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  border-top:1px solid #eee;
+  padding:18px 0;
+}
+
+.icon{
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  background:#f5f5f5;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:16px;
+  flex-shrink:0;
+}
+
+.option strong{
+  display:block;
+  font-size:12px;
+}
+
+.option small{
+  display:block;
+  color:#888;
+  font-size:10px;
+  margin-top:3px;
+}
+
+
+/* FORM */
+
+.form-card{
+  border:1px solid #e6e6e6;
+  border-radius:22px;
+  padding:30px;
+  animation:fadeUp .8s .35s both;
+}
+
+.form-card h2{
+  font-size:25px;
+  letter-spacing:-.04em;
+}
+
+.form-card>p{
+  color:#777;
+  font-size:12px;
+  line-height:1.6;
+  margin:9px 0 22px;
+}
+
+label{
+  display:block;
+  font-size:11px;
+  font-weight:800;
+  margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  border:1px solid #e2e2e2;
+  border-radius:10px;
+  padding:12px;
+  font-family:inherit;
+  font-size:13px;
+  outline:none;
+  margin-bottom:15px;
+  background:#fff;
+  transition:.25s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:#111;
+  box-shadow:0 0 0 3px #1111110a;
+}
+
+textarea{
+  min-height:110px;
+  resize:vertical;
+}
+
+button{
+  width:100%;
+  border:0;
+  border-radius:11px;
+  padding:14px;
+  background:#111;
+  color:#fff;
+  font-family:inherit;
+  font-size:12px;
+  font-weight:800;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px #0002;
+}
+
+
+/* FAQ */
+
+.faq{
+  max-width:850px;
+  margin:0 auto 80px;
+  padding:0 20px;
+  animation:fadeUp .8s .4s both;
+}
+
+.faq-title{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.faq-title h2{
+  font-size:38px;
+  letter-spacing:-.055em;
+}
+
+.faq-title p{
+  color:#777;
+  font-size:12px;
+  margin-top:8px;
+}
+
+details{
+  border-top:1px solid #e8e8e8;
+  padding:18px 0;
+}
+
+details:last-child{
+  border-bottom:1px solid #e8e8e8;
+}
+
+summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:13px;
+  font-weight:800;
+}
+
+summary::-webkit-details-marker{
+  display:none;
+}
+
+summary::after{
+  content:"+";
+  font-size:18px;
+  font-weight:400;
+  transition:.25s;
+}
+
+details[open] summary::after{
+  transform:rotate(45deg);
+}
+
+details p{
+  color:#777;
+  font-size:12px;
+  line-height:1.7;
+  padding-top:12px;
+  max-width:700px;
+}
+
+
+/* CTA */
+
+.cta{
+  text-align:center;
+  padding:70px 20px 90px;
+  border-top:1px solid #eee;
+}
+
+.cta h2{
+  font-size:clamp(35px,7vw,58px);
+  line-height:1;
+  letter-spacing:-.06em;
+  max-width:650px;
+  margin:auto;
+}
+
+.cta p{
+  color:#777;
+  font-size:13px;
+  margin:17px 0 23px;
+}
+
+.cta a{
+  display:inline-flex;
+  background:#111;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:12px;
+  font-size:12px;
+  font-weight:800;
+  transition:.3s;
+}
+
+.cta a:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 30px #0002;
+}
+
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  border-top:1px solid #eee;
+  padding:25px;
+  color:#999;
+  font-size:10px;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+@keyframes fadeDown{
+  from{
+    opacity:0;
+    transform:translateY(-15px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+@keyframes pulse{
+  50%{
+    opacity:.3;
+    transform:scale(.7);
+  }
+}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-5px);
+  }
+}
+
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+  .nav-links{
+    gap:12px;
+  }
+
+  .nav-links a{
+    font-size:10px;
+  }
+
+  .support{
+    grid-template-columns:1fr;
+    max-width:550px;
+  }
+
+  .hero{
+    padding-top:45px;
+  }
+}
+
+@media(max-width:450px){
+
+  nav{
+    padding:18px 5%;
+  }
+
+  .logo{
+    font-size:17px;
+  }
+
+  .nav-links{
+    gap:10px;
+  }
+
+  .contact-card,
+  .form-card{
+    padding:23px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  *{
+    animation:none!important;
+    transition:none!important;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+  <div class="logo">
+    YOURBRAND
+  </div>
+
+  <div class="nav-links">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="services.html">
+      Services
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="badge">
+    <span></span>
+    We're here to help
+  </div>
+
+  <h1>
+    Let's build your<br>
+    <span>website.</span>
+  </h1>
+
+  <p>
+    Have a question, want a website, or need help choosing
+    the right package? Get in touch with us.
+  </p>
+
+</section>
+
+
+<!-- SUPPORT -->
+
+<section class="support">
+
+
+  <!-- CONTACT -->
+
+  <div class="contact-card">
+
+    <h2>
+      Talk to us.
+    </h2>
+
+    <p>
+      Tell us what you're looking for and we'll help
+      you get started.
+    </p>
+
+
+    <a href="https://wa.me/919999999999" class="option">
+
+      <div class="icon">
+        💬
+      </div>
+
+      <div>
+        <strong>WhatsApp</strong>
+        <small>Chat with us directly</small>
+      </div>
+
+    </a>
+
+
+    <a href="mailto:hello@yourbrand.com" class="option">
+
+      <div class="icon">
+        ✉
+      </div>
+
+      <div>
+        <strong>Email</strong>
+        <small>hello@yourbrand.com</small>
+      </div>
+
+    </a>
+
+
+    <a href="services.html" class="option">
+
+      <div class="icon">
+        ₹
+      </div>
+
+      <div>
+        <strong>View Services</strong>
+        <small>See our website packages</small>
+      </div>
+
+    </a>
+
+  </div>
+
+
+  <!-- FORM -->
+
+  <div class="form-card">
+
+    <h2>
+      Start a project.
+    </h2>
+
+    <p>
+      Give us a few details about your website.
+    </p>
+
+
+    <form id="contactForm">
+
+      <label for="name">
+        Your name
+      </label>
+
+      <input
+        id="name"
+        type="text"
+        placeholder="Enter your name"
+        required
+      >
+
+
+      <label for="contact">
+        Phone / Email
+      </label>
+
+      <input
+        id="contact"
+        type="text"
+        placeholder="How can we contact you?"
+        required
+      >
+
+
+      <label for="package">
+        Website package
+      </label>
+
+      <select id="package" required>
+
+        <option value="">
+          Select a package
+        </option>
+
+        <option>
+          Starter Web — ₹999
+        </option>
+
+        <option>
+          Professional Web — ₹2,549
+        </option>
+
+        <option>
+          Advanced Web — ₹5,999
+        </option>
+
+        <option>
+          Not sure yet
+        </option>
+
+      </select>
+
+
+      <label for="message">
+        Tell us about your website
+      </label>
+
+      <textarea
+        id="message"
+        placeholder="What kind of website do you need?"
+        required
+      ></textarea>
+
+
+      <button type="submit">
+        Send Request →
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+  <div class="faq-title">
+
+    <h2>
+      Questions?
+    </h2>
+
+    <p>
+      A few things you might want to know.
+    </p>
+
+  </div>
+
+
+  <details>
+
+    <summary>
+      What does the ₹999 package include?
+    </summary>
+
+    <p>
+      The Starter package is designed for a simple,
+      professional and responsive business website.
+      Exact requirements can be discussed before starting.
+    </p>
+
+  </details>
+
+
+  <details>
+
+    <summary>
+      Will my website work on mobile?
+    </summary>
+
+    <p>
+      Yes. Our websites are designed to work across
+      phones, tablets and desktop screens.
+    </p>
+
+  </details>
+
+
+  <details>
+
+    <summary>
+      Can I request a custom design?
+    </summary>
+
+    <p>
+      Yes. Custom design requirements can be discussed
+      depending on the package you choose.
+    </p>
+
+  </details>
+
+
+  <details>
+
+    <summary>
+      How do I get started?
+    </summary>
+
+    <p>
+      Simply send us your requirements through the
+      contact form or WhatsApp and we'll guide you
+      through the next steps.
+    </p>
+
+  </details>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <h2>
+    Your website is one message away.
+  </h2>
+
+  <p>
+    Tell us what you need. We'll take it from there.
+  </p>
+
+  <a href="#contactForm">
+    Start Your Project →
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+  © 2026 YourBrand. All rights reserved.
+</footer>
+
+
+<script>
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("name").value.trim();
+
+  const contact =
+    document.getElementById("contact").value.trim();
+
+  const selectedPackage =
+    document.getElementById("package").value;
+
+  const message =
+    document.getElementById("message").value.trim();
+
+
+  if(!name || !contact || !selectedPackage || !message){
+
+    alert("Please fill in all fields.");
+
+    return;
+  }
+
+
+  alert(
+    "Thanks " + name +
+    "! Your request has been received. " +
+    "We'll contact you soon."
+  );
+
+
+  form.reset();
+
+});
+
+</script>
+
+</body>
+</html>
